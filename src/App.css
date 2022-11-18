@@ -92,14 +92,14 @@ body {
   transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
 }
 
-.clock .hand.second {
+
+.clock .hand.hour {
   --rotation: 0;
-  width: 3px;
-  height: 45%;
-  background: red;
+  width: 12px;
+  height: 30%;
+  background: rgb(11, 11, 11);
   animation: second 60s infinite linear;
 }
-
 
 .clock .hand.second {
   --rotation: 0;
