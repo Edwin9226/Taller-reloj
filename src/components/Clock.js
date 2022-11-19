@@ -1,35 +1,5 @@
-import React from 'react'
-
-function reloj(){
-  let time = new Date();
- 
-  let horas = time.getHours();
- let  minutos = time.getMinutes();
- let segundos = time.getSeconds();
- let porcentajeSegundos;
- let porcentajeHoras;
- let porcentajeMinutos;
- if (horas >= 12) {
-   porcentajeHoras = horas / 12 * 360;
- }  else {
-  porcentajeHoras = horas / 24 * 360;
- }
- 
- porcentajeHoras += minutos / 60 * 30;
- porcentajeMinutos = minutos / 60 * 360;
- porcentajeSegundos = segundos / 60 * 360;
- 
- document.getElementById("horas").style.transform = "rotate("+ porcentajeHoras +"deg)";
- document.getElementById("minutos").style.transform = "rotate("+ porcentajeMinutos +"deg)";
- document.getElementById("segundos").style.transform = "rotate("+ porcentajeSegundos +"deg)";
- document.getElementById("p-content").innerHTML = horas + ":" + minutos + ":" + segundos; 
- }
-
-
-function Clock() {
- 
-setInterval(reloj, 1000);
-
+import React from 'react' 
+function Clock() { 
   return (
     
     <div className="clock">
